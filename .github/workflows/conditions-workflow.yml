@@ -1,0 +1,8 @@
+name: Conditons workflow
+on: push
+jobs:
+  skip-or-run:
+    if: ${{ github.actor == 'takanakamo' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
